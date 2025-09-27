@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
+    <Compile Include="Assets\Scripts\ToolManager.cs" />
     <Compile Include="Assets\Scripts\PlayerTimer.cs" />
   </ItemGroup>
   <ItemGroup>

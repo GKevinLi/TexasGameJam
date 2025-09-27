@@ -455,6 +455,7 @@
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerTimer.cs"
 "Assets/Scripts/TimerScript.cs"
+"Assets/Scripts/ToolManager.cs"
 -langversion:9.0
 /deterministic
 /optimize+
