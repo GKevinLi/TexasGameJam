@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speedMultiplier = 2f;
     public float deceleration = 0.01f;
     bool touchingGnd = false;
+    bool touchingAnything = false;
     public Animator anim;
 
     public Rigidbody2D rb;
@@ -53,9 +54,20 @@ public class PlayerController : MonoBehaviour
         if (jumpAction.IsPressed() && touchingGnd)
         {
             //rb.AddForce(transform.up * 50, ForceMode2D.Impulse);
-            rb.linearVelocityY = (25);
-            anim.Play("Jump");
+            rb.linearVelocityY = (30);
+            
+            anim.SetTrigger("Jump");
+            anim.ResetTrigger("exitJump");
+           
             touchingGnd = false;
+            touchingAnything = false;
+        }
+        else {
+            anim.ResetTrigger("Jump");
+            //anim.SetTrigger("exitJump");
+        }
+        if(touchingAnything) {
+            anim.SetTrigger("exitJump");
         }
         
         Debug.Log(velocityX);
@@ -70,10 +82,15 @@ public class PlayerController : MonoBehaviour
         //rb.MovePosition(rb.position + new Vector2(velocityX * speedMultiplier, velocityY));
         rb.linearVelocityX = velocityX * speedMultiplier;
         if(velocityX >= 0.05f || velocityX <= -0.05f) {
-            anim.Play("Running");
+            anim.SetTrigger("Running");
+            anim.ResetTrigger("Idle");
         }
         else {
+            anim.ResetTrigger("Running");
             anim.SetTrigger("Idle");
+        }
+        if((velocityX < 0.05f && velocityX > -0.05f) && !jumpAction.IsPressed()) {
+            //anim.SetTrigger("Idle");
         }
         //rb.AddForce(transform.right * velocityX);
      
@@ -82,6 +99,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) 
     { 
         //Debug.Log("COLLIDED");
+        touchingAnything = true;
         if (collision.gameObject.CompareTag("Ground")) 
         { 
             touchingGnd = true;

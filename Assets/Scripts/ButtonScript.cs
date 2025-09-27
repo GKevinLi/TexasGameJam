@@ -34,7 +34,7 @@ public class ButtonScript : MonoBehaviour
             
         } 
         if (collision.gameObject.GetComponent<PlayerTimer>() != null) {
-            if(this.transform.parent.gameObject.GetComponent<TimerScript>().startingTime < collision.gameObject.GetComponent<TimerScript>().startingTime) {
+            if(this.transform.parent.gameObject.GetComponent<TimerScript>().startingTime < collision.gameObject.GetComponent<PlayerTimer>().startingTime) {
                 pressed = true;
             }
             else {
