@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speedMultiplier = 2f;
     public float deceleration = 0.01f;
     bool touchingGnd = false;
+    public Animator anim;
 
     public Rigidbody2D rb;
     private Transform startPos;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         startPos = transform;
+        anim = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         moveAction = InputSystem.actions.FindAction("Move");
         jumpAction = InputSystem.actions.FindAction("Jump");
@@ -52,7 +54,7 @@ public class PlayerController : MonoBehaviour
         {
             //rb.AddForce(transform.up * 50, ForceMode2D.Impulse);
             rb.linearVelocityY = (25);
-
+            anim.Play("Jump");
             touchingGnd = false;
         }
         
@@ -67,6 +69,12 @@ public class PlayerController : MonoBehaviour
 	  
         //rb.MovePosition(rb.position + new Vector2(velocityX * speedMultiplier, velocityY));
         rb.linearVelocityX = velocityX * speedMultiplier;
+        if(velocityX >= 0.05f || velocityX <= -0.05f) {
+            anim.Play("Running");
+        }
+        else {
+            anim.SetTrigger("Idle");
+        }
         //rb.AddForce(transform.right * velocityX);
      
     }
