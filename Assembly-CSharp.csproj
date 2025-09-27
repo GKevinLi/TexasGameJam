@@ -53,6 +53,7 @@
     <Compile Include="Assets\Scripts\ToolManager.cs" />
     <Compile Include="Assets\Scripts\BoxUpdater.cs" />
     <Compile Include="Assets\Scripts\PlayerTimer.cs" />
+    <Compile Include="Assets\Scripts\CameraScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

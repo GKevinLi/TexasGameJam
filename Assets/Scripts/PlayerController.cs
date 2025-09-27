@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour
     bool touchingGnd = false;
 
     public Rigidbody2D rb;
+    private Transform startPos;
     InputAction moveAction;
     InputAction jumpAction;
     void Start()
     {
+        startPos = transform;
         rb = gameObject.GetComponent<Rigidbody2D>();
         moveAction = InputSystem.actions.FindAction("Move");
         jumpAction = InputSystem.actions.FindAction("Jump");
@@ -53,12 +55,15 @@ public class PlayerController : MonoBehaviour
 
             touchingGnd = false;
         }
-        else {
+        
+        Debug.Log(velocityX);
+       if(velocityX < 0) {
             
-            
-        }
-
-       
+            transform.eulerAngles = new Vector3(0, 180, 0);
+       }
+       else if(velocityX > 0) {
+           transform.eulerAngles = new Vector3(0, 0, 0);
+       }
 	  
         //rb.MovePosition(rb.position + new Vector2(velocityX * speedMultiplier, velocityY));
         rb.linearVelocityX = velocityX * speedMultiplier;
