@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerTimer : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class PlayerTimer : MonoBehaviour
     private GameObject newText;
     private InputAction leftMouseClick;
     private Transform initialTransform;
+
+
+    public GameObject fadeObject;
+    public GameObject obj2;
+    public GameObject obj3;
+    bool dead = false;
 
     public int startingTime;
     public int timeTransferAmt = 0;
@@ -24,6 +31,9 @@ public class PlayerTimer : MonoBehaviour
         initialTransform.rotation = transform.rotation;
         newText.GetComponent<TMP_Text>().text = startingTime + "";
         StartCoroutine(secondCounter());
+
+        fadeObject.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+        fadeObject.SetActive(false);
     }
     //testing
     // Update is called once per frame
@@ -34,7 +44,7 @@ public class PlayerTimer : MonoBehaviour
         newText.GetComponent<TMP_Text>().text = startingTime + "";
         if(startingTime <= 0) {
             Destroy(newText);
-            Destroy(this.gameObject);
+            onDeath();
         }
         
         // if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -117,6 +127,28 @@ public class PlayerTimer : MonoBehaviour
         }
 
 
+    }
+    public void onDeath() {
+        
+        StartCoroutine(fadeIn());
+    }
+    IEnumerator fadeIn() {
+        fadeObject.SetActive(true);
+        
+        fadeObject.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        while (true) {
+            yield return new WaitForSeconds(0.1f); 
+            fadeObject.GetComponent<Image>().color = new Color(fadeObject.GetComponent<Image>().color.r, fadeObject.GetComponent<Image>().color.g, fadeObject.GetComponent<Image>().color.b, fadeObject.GetComponent<Image>().color.a + 0.1f);
+        
+            if(fadeObject.GetComponent<Image>().color.a >= 1) {
+                yield return new WaitForSeconds(1f); 
+                obj2.SetActive(true);
+                obj3.SetActive(true);
+                Time.timeScale = 0f;
+                yield break;
+            }
+        }
+    
     }
     
 }

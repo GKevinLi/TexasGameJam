@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float deceleration = 0.01f;
     bool touchingGnd = false;
     bool touchingAnything = false;
+    
     public Animator anim;
 
     public Rigidbody2D rb;
@@ -127,4 +128,5 @@ public class PlayerController : MonoBehaviour
         touchingAnything = false;
         
     } 
+    
 }

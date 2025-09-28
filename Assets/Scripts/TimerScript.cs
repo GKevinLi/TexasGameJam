@@ -12,18 +12,21 @@ public class TimerScript : MonoBehaviour
     
 
     public int startingTime;
-    public bool paused = false;
+    public bool paused;
     private Coroutine timer;
 
     private Coroutine moveText2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        newText = Instantiate(text, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation) as GameObject;
+        newText = Instantiate(text, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), new Quaternion(0, 0, 0, 0)) as GameObject;
         newText.SetActive(true);
         initialTransform = transform;
         newText.GetComponent<TMP_Text>().text = startingTime + "";
-        timer = StartCoroutine(secondCounter());
+        if(!paused) {
+            timer = StartCoroutine(secondCounter());
+        }
+        
     }
 
     // Update is called once per frame
