@@ -58,19 +58,35 @@ public class PlayerController : MonoBehaviour
             
             anim.SetTrigger("Jump");
             anim.ResetTrigger("exitJump");
+            anim.ResetTrigger("exitFall");
            
             touchingGnd = false;
             touchingAnything = false;
         }
+        else if(rb.linearVelocityY < 0.05f) {
+            anim.ResetTrigger("exitFall");
+            anim.SetTrigger("beginFall");
+            anim.SetTrigger("exitJump");
+            
+            //anim.ResetTrigger("Jump");
+        }
         else {
             anim.ResetTrigger("Jump");
+            anim.ResetTrigger("exitJump");
             //anim.SetTrigger("exitJump");
         }
+
+        if(rb.linearVelocityY >= -0.05f) {
+            anim.ResetTrigger("beginFall");
+        }
+
+
         if(touchingAnything) {
             anim.SetTrigger("exitJump");
+            anim.SetTrigger("exitFall");
         }
         
-        Debug.Log(velocityX);
+        //Debug.Log(touchingAnything);
        if(velocityX < 0) {
             
             transform.eulerAngles = new Vector3(0, 180, 0);
@@ -81,7 +97,7 @@ public class PlayerController : MonoBehaviour
 	  
         //rb.MovePosition(rb.position + new Vector2(velocityX * speedMultiplier, velocityY));
         rb.linearVelocityX = velocityX * speedMultiplier;
-        if(velocityX >= 0.05f || velocityX <= -0.05f) {
+        if(velocityX > 0.00f || velocityX < -0.00f) {
             anim.SetTrigger("Running");
             anim.ResetTrigger("Idle");
         }
@@ -104,5 +120,11 @@ public class PlayerController : MonoBehaviour
         { 
             touchingGnd = true;
         } 
+    } 
+    void OnCollisionExit2D(Collision2D collision) 
+    { 
+        //Debug.Log("COLLIDED");
+        touchingAnything = false;
+        
     } 
 }

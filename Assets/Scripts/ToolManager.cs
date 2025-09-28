@@ -10,6 +10,8 @@ public class ToolManager : MonoBehaviour
     public GameObject[] tools;
     private Transform initialTransform;
     public GameObject boxPrefab;
+
+    public int numTools = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,11 +28,12 @@ public class ToolManager : MonoBehaviour
         Vector2 scrollValue = Mouse.current.scroll.ReadValue();
 
         // The Y component represents vertical scrolling
+        if(numTools > 0) {
         scrollDelta = scrollValue.y;
         scrollVal += (int) scrollDelta;
-        scrollVal = scrollVal % 3;
+        scrollVal = scrollVal % numTools;
         if(scrollVal == -1) {
-            scrollVal = 2;
+            scrollVal = numTools - 1;
         }
         
         switchTools(scrollVal);
@@ -49,6 +52,8 @@ public class ToolManager : MonoBehaviour
                 gameObject.GetComponent<PlayerTimer>().startingTime -= 5;
                 gameObject.GetComponent<PlayerTimer>().showTimeChange(-5);
             }
+        }
+
         }
 
     }

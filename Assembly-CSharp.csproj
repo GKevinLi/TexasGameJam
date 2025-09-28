@@ -53,6 +53,8 @@
     <Compile Include="Assets\Scripts\ButtonScript.cs" />
     <Compile Include="Assets\Scripts\ToolManager.cs" />
     <Compile Include="Assets\Scripts\BoxUpdater.cs" />
+    <Compile Include="Assets\Scripts\addToolScript.cs" />
+    <Compile Include="Assets\Scripts\BarrierScript.cs" />
     <Compile Include="Assets\Scripts\PlayerTimer.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
   </ItemGroup>

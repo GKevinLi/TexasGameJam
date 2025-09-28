@@ -63,7 +63,7 @@ public class PlayerTimer : MonoBehaviour
 		Vector2 hitPosition = hit.point;
         float distance = Vector3.Distance(transform.position, hitPosition);
             
-	    if(hit.collider != null && distance <= 5.0f)
+	    if(hit.collider != null)
         {
                 //Debug.Log(hit.collider.gameObject);
             if(hit.collider.gameObject.GetComponent<TimerScript>() != null) {
