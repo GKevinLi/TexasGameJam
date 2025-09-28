@@ -149,7 +149,7 @@ public class PlayerTimer : MonoBehaviour
                 yield return new WaitForSeconds(1f); 
                 obj2.SetActive(true);
                 obj3.SetActive(true);
-                Time.timeScale = 0f;
+                
                 yield break;
             }
         }

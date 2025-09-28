@@ -465,6 +465,7 @@
 "Assets/Scripts/PlayerTimer.cs"
 "Assets/Scripts/TimerScript.cs"
 "Assets/Scripts/ToolManager.cs"
+"Assets/Scripts/UIButtonScript.cs"
 -langversion:9.0
 /deterministic
 /optimize+
