@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
             touchingGnd = false;
             touchingAnything = false;
         }
-        else if(rb.linearVelocityY < 0.05f) {
+        else if(rb.linearVelocityY < 0.1f) {
             anim.ResetTrigger("exitFall");
             anim.SetTrigger("beginFall");
             anim.SetTrigger("exitJump");
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
             //anim.SetTrigger("exitJump");
         }
 
-        if(rb.linearVelocityY >= -0.05f) {
+        if(rb.linearVelocityY >= -0.1f) {
             anim.ResetTrigger("beginFall");
         }
 
