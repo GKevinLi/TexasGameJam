@@ -2267,10 +2267,13 @@ MonoBehaviour:
 
     Use the scroll wheel to move between tools.
 
+    Left
+    click to use.
+
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
+  m_sharedMaterial: {fileID: -7442304084707936322, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2300,7 +2303,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2332,7 +2335,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 9.602851, w: 3.6724768}
+  m_margin: {x: 0, y: -0.37974262, z: 9.602851, w: 3.6724768}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -2366,7 +2369,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  - {fileID: -7442304084707936322, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4259,7 +4262,6 @@ GameObject:
   - component: {fileID: 1208896231}
   - component: {fileID: 1208896230}
   - component: {fileID: 1208896229}
-  - component: {fileID: 1208896233}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -4301,17 +4303,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.063711286, y: 0.06999445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 6.01, y: 9.14}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.0522413, y: 9.166167}
   m_EdgeRadius: 0
 --- !u!114 &1208896230
 MonoBehaviour:
@@ -4382,7 +4384,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 5213229242370633579, guid: e1c4ac4e56074b643ab06621e66310b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4402,27 +4404,12 @@ Transform:
   m_GameObject: {fileID: 1208896228}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.7, y: -0.81, z: 0}
-  m_LocalScale: {x: 3.1579, y: 7.0914, z: 1}
+  m_LocalPosition: {x: 51.38, y: -0.51, z: 0}
+  m_LocalScale: {x: 0.7767, y: 0.8484, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1208896233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208896228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d91a622eb9a90f54fb0635ccff41e328, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimerScript
-  text: {fileID: 330065068}
-  startingTime: 90
-  paused: 0
 --- !u!1 &1210268047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5308742052418444260, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
@@ -6532,6 +6519,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1464125336753206665, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -7442304084707936322, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
     - target: {fileID: 2059806256011875681, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
       propertyPath: m_text
       value: 99
@@ -6540,6 +6531,10 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: -0.08008981
       objectReference: {fileID: 0}
+    - target: {fileID: 2059806256011875681, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
     - target: {fileID: 2059806256011875681, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
       propertyPath: m_fontColor.a
       value: 1
@@ -6551,6 +6546,10 @@ PrefabInstance:
     - target: {fileID: 2059806256011875681, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059806256011875681, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2164811745870619978, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
       propertyPath: m_Name
@@ -6713,12 +6712,20 @@ PrefabInstance:
       value: Level Complete Door
       objectReference: {fileID: 0}
     - target: {fileID: 7669082527499350198, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6917
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669082527499350198, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6894
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669082527499350198, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 131.3
+      value: 131.4
       objectReference: {fileID: 0}
     - target: {fileID: 7669082527499350198, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.22
+      value: 4.75
       objectReference: {fileID: 0}
     - target: {fileID: 7669082527499350198, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6886,6 +6893,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1498211621884316356, guid: e95c049f1cbaf904fa0e87e6e039d776, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5094915856960419208, guid: e95c049f1cbaf904fa0e87e6e039d776, type: 3}
       propertyPath: text
       value: 

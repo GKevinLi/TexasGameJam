@@ -2190,6 +2190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial Text
       objectReference: {fileID: 0}
+    - target: {fileID: 7534023305873569927, guid: e95c049f1cbaf904fa0e87e6e039d776, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -7442304084707936322, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3735,11 +3739,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7669082527499350198, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 112.78855
+      value: 112.33
       objectReference: {fileID: 0}
     - target: {fileID: 7669082527499350198, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.310251
+      value: 13.03
       objectReference: {fileID: 0}
     - target: {fileID: 7669082527499350198, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10102,8 +10106,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You can now spawn temporary boxes with the blue Box tool.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
+  m_sharedMaterial: {fileID: -7442304084707936322, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10199,7 +10203,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  - {fileID: -7442304084707936322, guid: 53372a9fafb32194d8b33ada0cf7b2d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

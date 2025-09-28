@@ -1682,6 +1682,10 @@ PrefabInstance:
 
         Anyways, good luck getting out.'
       objectReference: {fileID: 0}
+    - target: {fileID: 1498211621884316356, guid: e95c049f1cbaf904fa0e87e6e039d776, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5654023981006941722, guid: e95c049f1cbaf904fa0e87e6e039d776, type: 3}
       propertyPath: m_LocalPosition.x
       value: 57.76
