@@ -2,11 +2,13 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class LevelCompleteScript : MonoBehaviour
 {
     GameObject camera;
-    GameObject fadeObject;
+    public GameObject fadeObject;
+    public GameObject endButton;
     GameObject player;
     public Vector3 newPos;
     public TimerScript[] unpauseObjects;
@@ -16,9 +18,10 @@ public class LevelCompleteScript : MonoBehaviour
     {
         camera = GameObject.Find("Main Camera");
         player = GameObject.Find("Player");
-        fadeObject = camera.transform.GetChild(1).gameObject;
-        fadeObject.GetComponent<Renderer>().material.color = new Color(0, 0, 0, 255);
+        
+        fadeObject.GetComponent<Image>().color = new Color(255, 255, 255, 255);
         fadeObject.SetActive(false);
+        endButton.SetActive(false);
         
     }
 
@@ -30,13 +33,13 @@ public class LevelCompleteScript : MonoBehaviour
     IEnumerator fadeIn() {
         fadeObject.SetActive(true);
         
-        fadeObject.GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0);
+        fadeObject.GetComponent<Image>().color = new Color(255, 255, 255, 0);
         while (true) {
             yield return new WaitForSeconds(0.1f); 
-            fadeObject.GetComponent<Renderer>().material.color = new Color(fadeObject.GetComponent<Renderer>().material.color.r, fadeObject.GetComponent<Renderer>().material.color.g, fadeObject.GetComponent<Renderer>().material.color.b, fadeObject.GetComponent<Renderer>().material.color.a + 0.1f);
+            fadeObject.GetComponent<Image>().color = new Color(fadeObject.GetComponent<Image>().color.r, fadeObject.GetComponent<Image>().color.g, fadeObject.GetComponent<Image>().color.b, fadeObject.GetComponent<Image>().color.a + 0.1f);
         
-            if(fadeObject.GetComponent<Renderer>().material.color.a >= 1) {
-                
+            if(fadeObject.GetComponent<Image>().color.a >= 1) {
+                endButton.SetActive(true);
                 //yield return StartCoroutine(fadeOut());
                 yield break;
             }

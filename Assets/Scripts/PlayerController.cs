@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
             //anim.SetTrigger("exitJump");
         }
 
-        if(rb.linearVelocityY >= -0.1f) {
+        if(rb.linearVelocityY >= -0.05f) {
             anim.ResetTrigger("beginFall");
         }
 

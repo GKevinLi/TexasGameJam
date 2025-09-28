@@ -1568,7 +1568,7 @@ PrefabInstance:
     - target: {fileID: 571367407655234307, guid: 4d599cf0e1ab18943872445e4fe1ba24, type: 3}
       propertyPath: obj2
       value: 
-      objectReference: {fileID: 1342250653}
+      objectReference: {fileID: 2036930425}
     - target: {fileID: 571367407655234307, guid: 4d599cf0e1ab18943872445e4fe1ba24, type: 3}
       propertyPath: obj3
       value: 
@@ -1977,6 +1977,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &474324041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2791311369174677579, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
+  m_PrefabInstance: {fileID: 1156568950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &491585732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,6 +2944,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &772265501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6922150380737945532, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
+  m_PrefabInstance: {fileID: 1156568950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &806417661
 GameObject:
   m_ObjectHideFlags: 0
@@ -4331,19 +4341,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1527305928067895733, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1027.4121
+      value: 1085.69
       objectReference: {fileID: 0}
     - target: {fileID: 1527305928067895733, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 570.1238
+      value: 534.0469
       objectReference: {fileID: 0}
     - target: {fileID: 1527305928067895733, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9.838
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 1527305928067895733, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -16.2031
+      value: -9.2652
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791311369174677579, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308742052418444260, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6635641068596689756, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
       propertyPath: m_Pivot.x
@@ -4423,6 +4441,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6635641068596689756, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922150380737945532, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8678906241033937376, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
@@ -5120,11 +5142,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1342250653 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1515899171460153909, guid: c01d11507523f6448bd0d140ccefb225, type: 3}
-  m_PrefabInstance: {fileID: 1156568950}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1418438185
 GameObject:
   m_ObjectHideFlags: 0
@@ -6314,7 +6331,8 @@ PrefabInstance:
       value: -1.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6178792320846237891, guid: b175e8a5077c241449b223c8f63cf0db, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b175e8a5077c241449b223c8f63cf0db, type: 3}
@@ -6853,6 +6871,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8185613938306942126, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
+      propertyPath: endButton
+      value: 
+      objectReference: {fileID: 474324041}
+    - target: {fileID: 8185613938306942126, guid: 693398e5c2ea00d49a6994d8d21008b5, type: 3}
+      propertyPath: fadeObject
+      value: 
+      objectReference: {fileID: 772265501}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

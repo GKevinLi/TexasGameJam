@@ -36,7 +36,7 @@ public class PlayerTimer : MonoBehaviour
 
         anim = gameObject.GetComponent<Animator>();
 
-        fadeObject.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+        fadeObject.GetComponent<Image>().color = new Color(255, 255, 255, 255);
         fadeObject.SetActive(false);
     }
     //testing
@@ -140,7 +140,7 @@ public class PlayerTimer : MonoBehaviour
     IEnumerator fadeIn() {
         fadeObject.SetActive(true);
         
-        fadeObject.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        fadeObject.GetComponent<Image>().color = new Color(255, 255, 255, 0);
         while (true) {
             yield return new WaitForSeconds(0.1f); 
             fadeObject.GetComponent<Image>().color = new Color(fadeObject.GetComponent<Image>().color.r, fadeObject.GetComponent<Image>().color.g, fadeObject.GetComponent<Image>().color.b, fadeObject.GetComponent<Image>().color.a + 0.1f);
