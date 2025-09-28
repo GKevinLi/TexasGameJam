@@ -11,6 +11,8 @@ public class PlayerTimer : MonoBehaviour
     private InputAction leftMouseClick;
     private Transform initialTransform;
 
+    public Animator anim;
+
 
     public GameObject fadeObject;
     public GameObject obj2;
@@ -32,6 +34,8 @@ public class PlayerTimer : MonoBehaviour
         newText.GetComponent<TMP_Text>().text = startingTime + "";
         StartCoroutine(secondCounter());
 
+        anim = gameObject.GetComponent<Animator>();
+
         fadeObject.GetComponent<Image>().color = new Color(0, 0, 0, 255);
         fadeObject.SetActive(false);
     }
@@ -44,6 +48,7 @@ public class PlayerTimer : MonoBehaviour
         newText.GetComponent<TMP_Text>().text = startingTime + "";
         if(startingTime <= 0) {
             Destroy(newText);
+            anim.SetTrigger("onDeath");
             onDeath();
         }
         
@@ -91,7 +96,7 @@ public class PlayerTimer : MonoBehaviour
 		Vector2 hitPosition = hit.point;
         float distance = Vector3.Distance(transform.position, hitPosition);
 
-	    if(hit.collider != null && distance <= 5.0f)
+	    if(hit.collider != null)
         {
                 //Debug.Log(hit.collider.gameObject);
             if(hit.collider.gameObject.GetComponent<TimerScript>() != null) {

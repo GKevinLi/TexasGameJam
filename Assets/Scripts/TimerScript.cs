@@ -78,11 +78,12 @@ public class TimerScript : MonoBehaviour
             tempText.GetComponent<TMP_Text>().color = new Color(tempText.GetComponent<TMP_Text>().color.r, tempText.GetComponent<TMP_Text>().color.g, tempText.GetComponent<TMP_Text>().color.b, tempText.GetComponent<TMP_Text>().color.a - 0.03f);
 
             if(tempText.GetComponent<TMP_Text>().color.a <= 0.0f) {
-                Destroy(tempText);
+                if(tempText != null) {
+                    Destroy(tempText);
+                }
+                
             }
-            void onDestroy() {
-                Destroy(tempText);
-            }
+            
         }
 
 

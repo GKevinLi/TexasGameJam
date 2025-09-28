@@ -5,6 +5,9 @@ public class ButtonScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     bool pressed = false;
     Vector3 pos;
+    public GameObject controlledGameObject;
+
+
     void Start()
     {
         pos = transform.position;
@@ -16,9 +19,11 @@ public class ButtonScript : MonoBehaviour
         //Debug.Log(pressed);
         if(pressed) {
             pressButton();
+            controlledGameObject.SetActive(true);
         }
         else {
             depressButton();
+            controlledGameObject.SetActive(false);
         }
     }
     void OnTriggerStay2D(Collider2D collision) 
