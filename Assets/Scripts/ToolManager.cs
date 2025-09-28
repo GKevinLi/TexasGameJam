@@ -8,6 +8,7 @@ public class ToolManager : MonoBehaviour
     private float scrollDelta;
     private int scrollVal;
     public GameObject[] tools;
+    private Transform initialTransform;
     public GameObject boxPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,6 +16,8 @@ public class ToolManager : MonoBehaviour
         tools[0] = transform.Find("Add Tool").gameObject;
         tools[1] = transform.Find("Remove Tool").gameObject;
         tools[2] = transform.Find("Create Tool").gameObject;
+        initialTransform = transform;
+        initialTransform.rotation = transform.rotation;
     }
 
     // Update is called once per frame
@@ -42,8 +45,9 @@ public class ToolManager : MonoBehaviour
             }
             if(scrollVal == 2) {
                 Vector3 vec = (Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
-	            Instantiate(boxPrefab, new Vector3(vec.x, vec.y, 10), transform.rotation);
+	            Instantiate(boxPrefab, new Vector3(vec.x, vec.y, 10), new Quaternion(0, 0, 0, 0));
                 gameObject.GetComponent<PlayerTimer>().startingTime -= 5;
+                gameObject.GetComponent<PlayerTimer>().showTimeChange(-5);
             }
         }
 

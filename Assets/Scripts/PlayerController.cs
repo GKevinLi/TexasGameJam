@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
 
     public Rigidbody2D rb;
-    private Transform startPos;
+    public Transform startPos;
     InputAction moveAction;
     InputAction jumpAction;
     void Start()
