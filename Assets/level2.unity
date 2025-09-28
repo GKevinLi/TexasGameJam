@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerScript
   text: {fileID: 2164811745870619978, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
-  startingTime: 30
+  startingTime: 45
   paused: 0
 --- !u!212 &29469723
 SpriteRenderer:
@@ -1277,7 +1277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8035478063865228842, guid: 4d599cf0e1ab18943872445e4fe1ba24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.65
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8035478063865228842, guid: 4d599cf0e1ab18943872445e4fe1ba24, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerScript
   text: {fileID: 2164811745870619978, guid: ba387195bcbe3a14cacb4b6aa65e824f, type: 3}
-  startingTime: 30
+  startingTime: 45
   paused: 0
 --- !u!212 &576252908
 SpriteRenderer:
@@ -6102,7 +6102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7486957543583013297, guid: b175e8a5077c241449b223c8f63cf0db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.31
+      value: -7.87
       objectReference: {fileID: 0}
     - target: {fileID: 7486957543583013297, guid: b175e8a5077c241449b223c8f63cf0db, type: 3}
       propertyPath: m_LocalPosition.y
