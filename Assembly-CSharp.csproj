@@ -58,7 +58,9 @@
     <Compile Include="Assets\Scripts\BoxUpdater.cs" />
     <Compile Include="Assets\Scripts\addToolScript.cs" />
     <Compile Include="Assets\Scripts\BarrierScript.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerTimer.cs" />
+    <Compile Include="Assets\Music.cs" />
     <Compile Include="Assets\Scripts\DeathPlane.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
   </ItemGroup>
